@@ -40,8 +40,6 @@ const DivStyleCard = styled.div`
     justify-content: space-between;
 
     div.cont-date, div.cont-time{
-      /* width: 100%; */
-
       display: flex;
       flex-direction: column;
 
@@ -95,15 +93,6 @@ const DivStyleCard = styled.div`
     height: 25px;
 
     background-color: var(--blue-low);
-    color: var(--blue-primary);
-
-    border: 1px solid var(--blue-primary);
-    border-radius: 15px;
-
-    :hover{
-      background-color: var(--blue-primary);
-      color: white;
-    }
   }
 `;
 

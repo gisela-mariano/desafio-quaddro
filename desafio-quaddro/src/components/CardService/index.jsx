@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+
 import DivStyleCard from "./style";
+
+import Button from "../Button";
 
 
 const CardService = ({service, handleClick}) => {
@@ -14,7 +17,7 @@ const CardService = ({service, handleClick}) => {
 
   const gettingStartDate = () => {
 
-    if(startDate !== '00'){
+    if(startDate !== '00' && startDate !== ''){
 
       const splitedDate = startDate.split('-');
   
@@ -28,14 +31,13 @@ const CardService = ({service, handleClick}) => {
 
   const gettingEndDate = () => {
 
-    if(endDate !== '00'){
+    if(endDate !== '00' && endDate !== ''){
 
       const splitedDate = endDate.split('-');
   
       return `${splitedDate[2]}/${splitedDate[1]}/${splitedDate[0]}`;
 
     } else{
-
       return '00'
     }
   }
@@ -108,7 +110,11 @@ const CardService = ({service, handleClick}) => {
         </div>
       </div>
 
-      <button onClick={() => handleClick(id)}>Editar</button>
+      <Button 
+      onClick={() => handleClick(id)}
+      colorStyle='stroke-blue'>
+        Editar
+      </Button>
 
     </DivStyleCard>
   )

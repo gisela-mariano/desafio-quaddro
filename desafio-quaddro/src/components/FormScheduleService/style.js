@@ -15,7 +15,6 @@ const DivSyleFormAside = styled.div`
     justify-content: space-evenly;
 
     div.cont-date{
-
       display: flex;
       justify-content: space-between;
 
@@ -25,7 +24,6 @@ const DivSyleFormAside = styled.div`
     }
 
     div.cont-buttons{
-
       width: 100%;
 
       display: flex;
@@ -34,16 +32,8 @@ const DivSyleFormAside = styled.div`
         width: 100px;
         height: 32px;
 
-        background-color: var(--gray-primary);
-        color: white;
-
-        border: none;
-        border-radius: 20px;
-
         :nth-child(1){
           margin-right: 20px;
-
-          background-color: var(--blue-primary);
 
           flex-grow: 1;
         }

@@ -24,9 +24,9 @@ const DivGeralStyle = styled.div`
 
       box-sizing: border-box;
 
-      div.cont-search-and-logout{
+      div.cont-search-and-clear{
         width: 100%;
-        max-width: 300px;
+        max-width: 350px;
 
         display: flex;
         align-items: center;
@@ -61,19 +61,8 @@ const DivGeralStyle = styled.div`
         }
 
         button{
-          width: 70px;
+          width: 115px;
           height: 37px;
-
-          background-color: white;
-          color: var(--blue-primary);
-
-          border: 1px solid var(--blue-primary);
-          border-radius: 20px;
-
-          :hover{
-            background-color: var(--blue-primary);
-            color: white;
-          }
         }
       }
 

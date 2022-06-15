@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { useForm } from "react-hook-form";
@@ -7,6 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useDispatch, useSelector } from "react-redux";
 
 import Input from "../Input";
+import Button from "../Button";
 
 import { deleteService, editService } from "../../store/modules/userServices/actions";
 import DivStyleModal from "./style";
@@ -25,7 +26,7 @@ const style = {
   p: 4,
 };
 
-const ModalEdit = ({open, handleCloseModal, dataService, serviceId}) => {
+const ModalEdit = ({open, handleCloseModal, dataService}) => {
 
   const dispatch = useDispatch();
 
@@ -56,7 +57,7 @@ const ModalEdit = ({open, handleCloseModal, dataService, serviceId}) => {
 
   useEffect(() => {
     reset(dataService)
-  }, [dataService])
+  }, [dataService]);
 
 
   const handleCloseModalAndCleanInputs = () => {
@@ -198,13 +199,26 @@ const ModalEdit = ({open, handleCloseModal, dataService, serviceId}) => {
               </div>
 
               <div className="cont-buttons">
-
-                <button type="reset" onClick={() => handleDelete()}>Excluir Agendamento</button>
+                <Button 
+                type="reset" 
+                onClick={() => handleDelete()}
+                colorStyle="stroke-blue">
+                  Excluir Agendamento
+                </Button>
 
                 <div className="cont-buttons-edit">
-                  <button type="submit">Editar</button>
+                  <Button 
+                  type="submit"
+                  colorStyle="blue">
+                    Editar
+                  </Button>
 
-                  <button type="reset" onClick={() => handleCloseModal()}>Cancelar</button>
+                  <Button 
+                  type="reset" 
+                  onClick={() => handleCloseModal()}
+                  colorStyle="gray">
+                    Cancelar
+                  </Button>
                 </div>
 
               </div>

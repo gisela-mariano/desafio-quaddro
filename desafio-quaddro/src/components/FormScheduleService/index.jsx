@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
 
 import Input from "../Input";
+import Button from "../Button";
 
 import DivSyleFormAside from "./style";
 
@@ -118,9 +119,17 @@ const FormScheduleService = () => {
           </div>
 
           <div className="cont-buttons">
-            <button type="submit">Agendar</button>
+            <Button 
+            type="submit"
+            colorStyle="blue">
+              Agendar
+            </Button>
 
-            <button type="reset">Cancelar</button>
+            <Button 
+            type="reset"
+            colorStyle="gray">
+              Cancelar
+            </Button>
           </div>
         </form>
 

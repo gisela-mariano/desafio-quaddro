@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 
-
 const DivStyleScheduledServices = styled.div`
 
   width: 100%;
@@ -24,7 +23,6 @@ const DivStyleScheduledServices = styled.div`
   }
 
   nav{
-
     margin: 20px 0 30px;
 
     span{
@@ -34,7 +32,6 @@ const DivStyleScheduledServices = styled.div`
     }
 
     div.cont-buttons{
-
       margin-top: 10px;
 
       button{
@@ -42,11 +39,6 @@ const DivStyleScheduledServices = styled.div`
 
         margin-right: 15px;
         padding: 5px 8px;
-
-        background-color: white;
-
-        border: 1.5px solid var(--gray-primary);
-        border-radius: 20px;
       }
     }
   }
@@ -73,7 +65,6 @@ const DivStyleScheduledServices = styled.div`
     }
 
     div.services-null{
-
       width: 100%;
 
       display: flex;

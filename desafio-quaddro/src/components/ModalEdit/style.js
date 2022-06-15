@@ -26,7 +26,6 @@ const DivStyleModal = styled.div`
     justify-content: space-evenly;
 
     div.cont-date{
-
       display: flex;
       justify-content: space-between;
 
@@ -36,27 +35,14 @@ const DivStyleModal = styled.div`
     }
 
     div.cont-buttons{
-
       display: flex;
       flex-direction: column;
 
       button{
         height: 30px;
-
-        border: none;
-        border-radius: 20px;
-
-        :first-child{
-
-          background-color: white;
-          color: var(--blue-primary);
-
-          border: 1px solid var(--blue-primary);
-        }
       }
 
       div.cont-buttons-edit{
-
         width: 100%;
 
         margin-top: 10px;
@@ -64,24 +50,12 @@ const DivStyleModal = styled.div`
         display: flex;
 
         button{
-
           width: 150px;
 
           :first-child{
             margin-right: 20px;
-            
-            color: white;
-            background-color: var(--blue-primary);
-
-            border: none;
 
             flex-grow: 1;
-          }
-
-          :last-child{
-
-            color: white;
-            background-color: var(--gray-primary);
           }
         }
       }

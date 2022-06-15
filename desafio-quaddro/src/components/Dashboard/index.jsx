@@ -7,6 +7,7 @@ import DivGeralStyle from "./style";
 
 import FormScheduleService from "../FormScheduleService";
 import ScheduledService from "../ScheduledServices";
+import Button from "../Button";
 
 import { listService } from "../../store/modules/listService/actions";
 
@@ -17,29 +18,23 @@ const Dashboard = () => {
 
   const dispatch = useDispatch();
 
+
   const handleLogout = () => {
 
     localStorage.removeItem('dataServices')
 
     document.location.reload()
-  }
+  };
 
-  // const handleSearch = (search) => {
-
-  //   const searchedService = services.filter((service) => service.title.toLowerCase().includes(search.toLowerCase()));
-
-  //   console.log(searchedService);
-
-  //   dispatch(filteredServices(searchedService))
-  // }
-
+  
   const handleSearch = (search) => {
     
     const searchedService = services.filter((service) =>
       service.title.toLowerCase().includes(search.toLowerCase())
     );
 
-    dispatch(listService(searchedService))
+    dispatch(listService(searchedService));
+
   };
 
 
@@ -50,14 +45,19 @@ const Dashboard = () => {
         <div className="cont-header">
           <img src={logo} alt="Logo" />
 
-          <div className="cont-search-and-logout">
+          <div className="cont-search-and-clear">
             <div className="cont-search">
               <BiSearch/>
   
               <input type="text" placeholder="Pesquisar" onChange={(event) => handleSearch(event.target.value)}/>
             </div>
 
-            <button onClick={() => handleLogout()}>Sair</button>
+            <Button 
+            onClick={() => handleLogout()} 
+            title='Limpar dados do local storage' 
+            colorStyle='stroke-blue'>
+              Apagar Dados
+            </Button>
           </div>
 
         </div>
